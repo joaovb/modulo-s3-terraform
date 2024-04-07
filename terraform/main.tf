@@ -1,17 +1,17 @@
-provider "aws" {
-  version = "~>3.0"
-  region  = "east-us-1"
-}
-
 terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
-      version = "~>5.44"
+      version = ">=5.44"
     }
   }
 
   required_version = ">=0.14.9"
+
+provider "aws" {
+  version = "~>3.0"
+  region  = "east-us-1"
+}
 
 backend "s3" {
        bucket = "labs3site"
