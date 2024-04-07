@@ -1,3 +1,8 @@
+provider "aws" {
+  version = "~>3.0"
+  region  = "east-us-1"
+}
+
 terraform {
   required_providers {
     aws = {
@@ -17,10 +22,7 @@ backend "s3" {
 
 }
 
-provider "aws" {
-  version = "~>3.0"
-  region  = "east-us-1"
-}
+
 
 resource "aws_s3_bucket" "s3Bucket" {
      bucket = "labs3site"
